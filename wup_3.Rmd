@@ -1,7 +1,7 @@
 ---
 title: "Alcohol vs Seat choice"
-author: "Your Name"
-date: "Fall 2020"
+author: "Leia"
+date: "summer 2023"
 output: html_document
 ---
 
@@ -14,8 +14,20 @@ require(tidyverse)
 require(tigerstats)
 davisdata <- read.csv(file="UCDavis.csv")
 ```
-## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
-## you choose to sit in??
+## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row you choose to sit in??
+
+## introduction 
+
+$H_O$ there is no difference in the alcohol consumed based on the row you sit in
+
+$H_O$ there is no difference in the alcohol consumed based on the row you sit in 
+
+# method 
+
+the response variable is numerical and the explanatory variable is categorical. Therefore for we use numerical~cat.  
+
+## results  
+
 
 ## Now with ggplot - first select the basic data
 
@@ -28,12 +40,18 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 basicCN + geom_boxplot()
 ```
   
+The alcohol consumed in the back is higher then the ones who sit in the front/ middle. 
+
   
 ### get fancy  
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
+
+
+this box plot shows that the back seat people drink more than the people who sit in the front and middle. 
+
 
 ## Numerical Summarys 
 
