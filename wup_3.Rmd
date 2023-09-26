@@ -55,6 +55,13 @@ this box plot shows that the back seat people drink more than the people who sit
 
 ## Numerical Summarys 
 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+
+this data shows the mean and median of alcohol consumed.it also show how many people drink by each quarter. The people in the back drink way more than the people in the front and middle. 
+
+
 ## Inferential Tests
 
 ## Conclusions
