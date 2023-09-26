@@ -64,6 +64,20 @@ this data shows the mean and median of alcohol consumed.it also show how many pe
 
 ## Inferential Tests
 
+```{r}
+model.1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model.1)
+```
+
+the p value is 0.0001116 which is less than 0.05. the p value is smaller so therefore we reject the null hypothesis. tis mean that there is a difference in alcohol consumption based on where they sit.  
+
+
+```{r}
+plot(TukeyHSD(model.1))
+```
+
+we dont have evidence that there is a difference in the alcohol consumption between the middle and front rows. the only difference we found is the back row consumes more than the middle front row.
+
 ## Conclusions
 
-
+is there a difference between the alcohol consumed between the row you choose to sit in? yes there is no difference between the alcohol consumed by the row you sit in. Based on the data the back row consumed more alcohol than the people who sit in the front and middle row. the p is 0.0001116 which is smaller than 0.05 I will reject the null hypothesis. therefore the back row people consume more alcohol. 
